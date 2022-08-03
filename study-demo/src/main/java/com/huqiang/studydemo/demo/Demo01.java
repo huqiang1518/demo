@@ -40,6 +40,7 @@ public class Demo01 {
         HashMap<String, String> hashMap = new HashMap<>();
 
         Thread.sleep(1000);
+        Thread.sleep(1000);
     }
 
     static Boolean isAdd(int i) {
