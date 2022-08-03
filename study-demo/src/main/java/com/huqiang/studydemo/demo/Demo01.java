@@ -41,6 +41,8 @@ public class Demo01 {
 
         Thread.sleep(1000);
         Thread.sleep(1000);
+        Thread.sleep(1000);
+        Thread.sleep(1000);
     }
 
     static Boolean isAdd(int i) {
