@@ -39,7 +39,7 @@ public class Demo01 {
         ArrayList<String> strings = new ArrayList<>();
         HashMap<String, String> hashMap = new HashMap<>();
 
-
+        Thread.sleep(1000);
     }
 
     static Boolean isAdd(int i) {
