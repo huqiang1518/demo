@@ -1,6 +1,7 @@
 package com.huqiang.studydemo.demo;
 
 import org.springframework.stereotype.Controller;
+import sun.nio.ch.ThreadPool;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -9,10 +10,19 @@ import java.util.Vector;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
 
 @Controller
 public class Demo01 {
+
+    static int i = 1;
+
     public static void main(String[] args) throws InterruptedException {
+
+        String str = "sdlkfsdklfjkl";
+
+
+
         HashMap<Object, Object> map = new HashMap<>();
         Hashtable<Object, Object> hashtable = new Hashtable<>();
         ArrayList<Object> arrayList = new ArrayList<>();
@@ -32,7 +42,7 @@ public class Demo01 {
             }
         }).start();
 
-        new Thread(()-> System.out.println("kdsjldskldsk")).start();
+        new Thread(() -> System.out.println("kdsjldskldsk")).start();
 
         System.out.println(Thread.currentThread().getName());
 
@@ -40,17 +50,26 @@ public class Demo01 {
         HashMap<String, String> hashMap = new HashMap<>();
 
         Thread.sleep(1000);
-        Thread.sleep(1000);
-        Thread.sleep(1000);
-        Thread.sleep(1000);
-        Thread.sleep(1000);
-        Thread.sleep(1000);
+
+        Thread thread = new Thread();
+        thread.wait(1000);
+
+        Executors.newFixedThreadPool(3);
+
+        System.gc();
+
+
+    }
+
+
+
+    public void test() {
     }
 
     static Boolean isAdd(int i) {
         if (i % 2 == 1) {
             return true;
-        }else {
+        } else {
             return false;
         }
     }
