@@ -5,6 +5,9 @@ public class Demo02 {
     public void addI(){
         i++;
     }
+
+
+
     public static void main(String[] args) throws InterruptedException {
         final Demo02 test01 = new Demo02();
         for (int n = 0; n < 1000; n++) {
